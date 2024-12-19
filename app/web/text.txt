@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDHI BOT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chatbot-button" onclick="toggleChat()">
+        <img src="chat-icon.png" alt="Chat" />
+    </div>
+    <div id="chat-window" class="chat-window">
+        <div class="chat-header">
+            Chatbot
+            <button class="live-stream-button" onclick="alert('Live Stream functionality coming soon!')">Live Stream</button>
+            <span class="close-btn" onclick="toggleChat()">&times;</span>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="suggestion-boxes">
+            <div class="suggestion-button" onclick="TrackCaseStatus()" style="cursor: pointer;">Track Case Status</div>
+            <div class="suggestion-button" onclick="FindaLawyer()" style="cursor: pointer;">Find a Lawyer</div>
+            <div class="suggestion-button" onclick="LegalResources()" style="cursor: pointer;">Legal Resources</div>
+            <a class="download-link" href="https://play.google.com/store/apps/details?id=in.gov.ecourts.eCourtsServices&hl=en_US&pli=1" target="_blank">Download eCourts Service App</a>
+        </div>
+        <main>
+            <form>
+                <div class="prompt-box">
+                    <label>
+          <input name="prompt" placeholder="Enter instructions here" type="text"
+            value="">
+        </label>
+                    <button type="submit">Go</button>
+                </div>
+            </form>
+            <p class="output">(Results will appear here)</p>
+        </main>
+        <script>
+            function toggleChat() {
+                const chatWindow = document.getElementById('chat-window');
+                chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+            }
+
+            function TrackCaseStatus() {
+                window.location.href = "https://districts.ecourts.gov.in/";
+            }
+
+            function FindaLawyer() {
+                window.location.href = "https://lawrato.com/lawyers/noida";
+            }
+
+            function LegalResources() {
+                window.location.href = "https://nalsa.gov.in/services/legal-aid/legal-services";
+            }
+        </script>
+        <script type="module" src="/main.js"></script>
+        <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>
+</body>
+
+</html>
