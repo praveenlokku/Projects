@@ -1,4 +1,5 @@
 1.. Clone this repo (" https://github.com/praveenlokku/Projects/tree/main/smart_Interviewer ")
+
 2.. open Terminal in the Code editor (" ctrl + shift + ` ")
 3.. pip install -r requirements.txt
 4.. change gemini api key 
